@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap");
+
+:root {
+  --ink: #141414;
+  --muted: #5c5c5c;
+  --line: #e4e4e4;
+  --accent: #1f6feb;
+  --paper: #f7f5f0;
+  --card: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(900px 300px at 20% 0%, #fff5e6 0%, transparent 60%),
+    radial-gradient(700px 280px at 90% 10%, #e9f2ff 0%, transparent 60%),
+    var(--paper);
+  color: var(--ink);
+  font-family: "Work Sans", system-ui, -apple-system, Segoe UI, sans-serif;
+  line-height: 1.5;
+}
+
+.page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px 48px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+
+.name {
+  font-family: "Spectral", serif;
+  font-size: 40px;
+  letter-spacing: 1px;
+  margin: 0 0 8px 0;
+}
+
+.role {
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contact {
+  text-align: right;
+  font-size: 14px;
+  color: var(--muted);
+  display: grid;
+  gap: 4px;
+}
+
+.section {
+  margin-top: 28px;
+}
+
+.section h2 {
+  margin: 0 0 10px 0;
+  font-family: "Spectral", serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.section p {
+  margin: 0;
+}
+
+.chip-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip-list li {
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #fafafa;
+  font-size: 14px;
+}
+
+.item {
+  margin-top: 18px;
+}
+
+.item-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.item-title {
+  font-weight: 600;
+}
+
+.item-meta {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+ul {
+  margin: 8px 0 0 18px;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 700px) {
+  .page {
+    margin: 16px;
+    padding: 24px;
+  }
+
+  .header {
+    align-items: flex-start;
+  }
+
+  .contact {
+    text-align: left;
+  }
+}
